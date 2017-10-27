@@ -16,6 +16,7 @@ import { AuthGuard } from './_guards/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
+import { CreatecampComponent } from './createcamp/index';
 import { RegisterComponent } from './register/index';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { RegisterComponent } from './register/index';
         AppComponent,
         AlertComponent,
         HomeComponent,
+        CreatecampComponent,
         LoginComponent,
         RegisterComponent
     ],

@@ -1,7 +1,7 @@
 ﻿import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
-import { User } from '../_models/index';
+import { User, Campaign} from '../_models/index';
 
 @Injectable()
 export class UserService {
@@ -17,6 +17,10 @@ export class UserService {
 
     create(user: User) {
         return this.http.post('http://localhost:3200/adduser', user, this.jwt()).map((response: Response) => response.json());
+    }
+
+    createcamp(campaign: Campaign) {
+        return this.http.post('http://localhost:3200/addcampaigns', campaign, this.jwt()).map((response: Response) => response.json());
     }
 
     update(user: User) {
